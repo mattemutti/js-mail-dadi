@@ -13,9 +13,10 @@ let notPresent = false
 //console.log(mailList);
 
 const userMailElement = document.getElementById('user_mail');
+const boxUman = document.getElementById("box_uman")
+const boxPc = document.getElementById("box_pc")
 
-
-document.querySelector('button') .addEventListener('click', function () {
+document.querySelector('button').addEventListener('click', function () {
 
 	// salvare il valore dell'input user_mail html
 	const userMail = userMailElement.value
@@ -24,28 +25,31 @@ document.querySelector('button') .addEventListener('click', function () {
 
 	// - chiedere all'utente la sua mail con un prompt
 	//const userMail = prompt('Inserisci la tua mail');
-	
+
 	//console.log(userMail);
-	
+
 	// - confrontare che la mail sia all'interno dell'array
 	for (let i = 0; i < mailList.length; i++) {
 		const element = mailList[i];
 		//console.log(element);
-	
-	
+
+
 		if (userMail === element) {
 			// - stampare in console il risultato
 			console.log('Mail presente');
 			notPresent = true
-	
-	
+
+
 			//se la mail è presente allora
 			const nUser = Math.round(Math.random() * 5) + 1;
 			console.log(nUser);
-	
+			boxUman.innerHTML = (nUser);
+
 			const nPc = Math.round(Math.random() * 5) + 1;
 			console.log(nPc);
-	
+			boxPc.innerHTML = (nPc);
+
+
 			if (nUser === nPc) {
 				console.log("PARITà RIPROVARE");
 			} else if (nUser < nPc) {
@@ -54,11 +58,11 @@ document.querySelector('button') .addEventListener('click', function () {
 				console.log("VINCE L'UMANO");
 			}
 		}
-	
+
 	}
-	
+
 	//console.log(notPresent);
-	
+
 	// Condizione per stampare in console un solo messaggio di non presenza
 	if (notPresent == false) {
 		console.log('Mail non presente');
@@ -70,6 +74,10 @@ document.querySelector('button') .addEventListener('click', function () {
 
 
 
+
+
+
+// Già incorporato nel cosice supra per il bonus
 // Ex 2 - DADI
 
 

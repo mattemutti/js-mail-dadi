@@ -15,6 +15,8 @@ let notPresent = false
 const userMailElement = document.getElementById('user_mail');
 const boxUman = document.getElementById("box_uman")
 const boxPc = document.getElementById("box_pc")
+const errMail = document.getElementById("error_mail")
+
 
 document.querySelector('button').addEventListener('click', function () {
 
@@ -66,6 +68,7 @@ document.querySelector('button').addEventListener('click', function () {
 	// Condizione per stampare in console un solo messaggio di non presenza
 	if (notPresent == false) {
 		console.log('Mail non presente');
+		errMail.innerHTML = (`Mail non presente. Riprova`)
 	}
 
 

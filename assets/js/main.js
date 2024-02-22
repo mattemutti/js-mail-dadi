@@ -16,6 +16,7 @@ const userMailElement = document.getElementById('user_mail');
 const boxUman = document.getElementById("box_uman")
 const boxPc = document.getElementById("box_pc")
 const errMail = document.getElementById("error_mail")
+const result = document.getElementById("result")
 
 
 document.querySelector('button').addEventListener('click', function () {
@@ -46,18 +47,23 @@ document.querySelector('button').addEventListener('click', function () {
 			const nUser = Math.round(Math.random() * 5) + 1;
 			console.log(nUser);
 			boxUman.innerHTML = (nUser);
-
+			
 			const nPc = Math.round(Math.random() * 5) + 1;
 			console.log(nPc);
 			boxPc.innerHTML = (nPc);
-
-
+			
+			
 			if (nUser === nPc) {
 				console.log("PARITà RIPROVARE");
+				result.innerHTML = ("Parità - Riprovare")
 			} else if (nUser < nPc) {
 				console.log('VINCE LA MACCHINA');
+				result.innerHTML = `VINCE LA MACCHINA: ${nPc}`
+
 			} else {
 				console.log("VINCE L'UMANO");
+				result.innerHTML = `VINCE L'UMANO: ${nUser}`
+
 			}
 		}
 
@@ -68,7 +74,7 @@ document.querySelector('button').addEventListener('click', function () {
 	// Condizione per stampare in console un solo messaggio di non presenza
 	if (notPresent == false) {
 		console.log('Mail non presente');
-		errMail.innerHTML = (`Mail non presente. Riprova`)
+		errMail.innerHTML = ("Mail non presente. Riprova")
 	}
 
 

@@ -58,11 +58,11 @@ document.querySelector('button').addEventListener('click', function () {
 				result.innerHTML = ("Parità - Riprovare")
 			} else if (nUser < nPc) {
 				console.log('VINCE LA MACCHINA');
-				result.innerHTML = `VINCE LA MACCHINA: ${nPc}`
+				result.innerHTML += `VINCE LA MACCHINA: ${nPc}`
 
 			} else {
 				console.log("VINCE L'UMANO");
-				result.innerHTML = `VINCE L'UMANO: ${nUser}`
+				result.innerHTML += `VINCE L'UMANO: ${nUser}`
 
 			}
 		}
@@ -74,7 +74,7 @@ document.querySelector('button').addEventListener('click', function () {
 	// Condizione per stampare in console un solo messaggio di non presenza
 	if (notPresent == false) {
 		console.log('Mail non presente');
-		errMail.innerHTML = ("Mail non presente. Riprova")
+		errMail.innerHTML += ("Mail non presente. Riprova")
 	}
 
 

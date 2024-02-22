@@ -57,6 +57,6 @@ Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in
 
 - let const
 - Math.random()
-- fixed()
+- fixed()----- era round!!!
 - if else
 - log

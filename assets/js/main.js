@@ -14,7 +14,7 @@ let notPresent = false
 
 
 // - chiedere all'utente la sua mail con un prompt
-const userMail = prompt('Inserisci la tua mail')
+const userMail = prompt('Inserisci la tua mail');
 
 //console.log(userMail);
 
@@ -39,3 +39,31 @@ for (let i = 0; i < mailList.length; i++) {
 if (notPresent == false){
 	console.log('Mail non presente');
 }
+
+
+
+// Ex 2 - DADI
+
+
+// - creare 2 variabili con la generazione di un numero random e scriverli in console
+
+const nUser = Math.round(Math.random()*5)+1;  // crea un numero arrotondato intero casuale tra 1 e 6
+console.log(nUser);
+
+const nPc = Math.round(Math.random()*5)+1;  // crea un numero arrotondato intero casuale tra 1 e 6
+console.log(nPc);
+
+// - controllare se il numero del giocateore è più o meno grande del numero del computer
+
+if (nUser === nPc){
+	console.log("PARITà RIPROVARE");
+} else if (nUser < nPc){
+	console.log('VINCE LA MACCHINA');
+} else {
+	console.log("VINCE L'UMANO");
+
+}
+
+
+
+// - stampare chi è il vincitore
